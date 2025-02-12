@@ -1,7 +1,5 @@
 package com.example.day01generics.smartwarehousemanagement;
 
-import java.util.List;
-
 abstract class WarehouseItem {
     private String itemName;
     private double price;
