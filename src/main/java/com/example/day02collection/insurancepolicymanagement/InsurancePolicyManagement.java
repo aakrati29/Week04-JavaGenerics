@@ -3,9 +3,9 @@ package com.example.day02collection.insurancepolicymanagement;
 import java.util.*;
 
 public class InsurancePolicyManagement {
-    private Set<InsurancePolicy> hashSetPolicies = new HashSet<>();
-    private Set<InsurancePolicy> linkedHashSetPolicies = new LinkedHashSet<>();
-    private Set<InsurancePolicy> treeSetPolicies = new TreeSet<>();
+    Set<InsurancePolicy> hashSetPolicies = new HashSet<>();
+    Set<InsurancePolicy> linkedHashSetPolicies = new LinkedHashSet<>();
+    Set<InsurancePolicy> treeSetPolicies = new TreeSet<>();
     private int numPolicies;
 
     // Add policy to all sets
