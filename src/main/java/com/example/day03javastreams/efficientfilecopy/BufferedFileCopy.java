@@ -2,7 +2,7 @@ package com.example.day03javastreams.efficientfilecopy;
 
 import java.io.*;
 
-class BufferedFileCopy {
+public class BufferedFileCopy {
     public static void copyFileBuffered(String sourcePath, String destinationPath) throws IOException {
         try (BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(sourcePath));
              BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(destinationPath))) {
