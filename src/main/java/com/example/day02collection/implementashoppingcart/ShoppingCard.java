@@ -3,9 +3,9 @@ package com.example.day02collection.implementashoppingcart;
 import java.util.*;
 
 public class ShoppingCard {
-    private Map<String, Double> productPrices = new HashMap<>(); // Stores product prices
-    private LinkedHashMap<String, Integer> cart = new LinkedHashMap<>(); // Maintains order of items added
-    private TreeMap<Double, List<String>> sortedByPrice = new TreeMap<>(); // Displays items sorted by price
+    public Map<String, Double> productPrices = new HashMap<>();
+    public LinkedHashMap<String, Integer> cart = new LinkedHashMap<>();
+    public TreeMap<Double, List<String>> sortedByPrice = new TreeMap<>();
 
     public void addProduct(String product, double price, int quantity) {
         productPrices.put(product, price);
