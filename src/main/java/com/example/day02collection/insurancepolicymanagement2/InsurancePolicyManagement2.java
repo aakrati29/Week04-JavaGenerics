@@ -1,37 +1,37 @@
-package com.example.day02collection.insurancepolicymanagement;
+package com.example.day02collection.insurancepolicymanagement2;
 
 import java.util.*;
 
-public class InsurancePolicyManagement {
-    private Set<InsurancePolicy> hashSetPolicies = new HashSet<>();
-    private Set<InsurancePolicy> linkedHashSetPolicies = new LinkedHashSet<>();
-    private Set<InsurancePolicy> treeSetPolicies = new TreeSet<>();
+public class InsurancePolicyManagement2 {
+    private Set<InsurancePolicy2> hashSetPolicies = new HashSet<>();
+    private Set<InsurancePolicy2> linkedHashSetPolicies = new LinkedHashSet<>();
+    private Set<InsurancePolicy2> treeSetPolicies = new TreeSet<>();
     private int numPolicies;
 
     // Add policy to all sets
-    public void addPolicy(InsurancePolicy policy) {
+    public void addPolicy(InsurancePolicy2 policy) {
         hashSetPolicies.add(policy);
         linkedHashSetPolicies.add(policy);
         treeSetPolicies.add(policy);
     }
 
     // Retrieve all unique policies
-    public void displayPolicies(Set<InsurancePolicy> policies) {
-        for (InsurancePolicy policy : policies) {
+    public void displayPolicies(Set<InsurancePolicy2> policies) {
+        for (InsurancePolicy2 policy : policies) {
             System.out.println(policy);
         }
     }
 
     // Retrieve policies expiring in the next 30 days
-    public Set<InsurancePolicy> getExpiringPolicies() {
-        Set<InsurancePolicy> expiringPolicies = new TreeSet<>();
+    public Set<InsurancePolicy2> getExpiringPolicies() {
+        Set<InsurancePolicy2> expiringPolicies = new TreeSet<>();
         Date today = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(today);
         calendar.add(Calendar.DAY_OF_YEAR, 30); // 30 days from today
         Date thirtyDaysLater = calendar.getTime();
 
-        for (InsurancePolicy policy : treeSetPolicies) {
+        for (InsurancePolicy2 policy : treeSetPolicies) {
             if (!policy.getExpiryDate().after(thirtyDaysLater)) {
                 expiringPolicies.add(policy);
             }
@@ -40,9 +40,9 @@ public class InsurancePolicyManagement {
     }
 
     // Retrieve policies by coverage type
-    public Set<InsurancePolicy> getPoliciesByCoverageType(String type) {
-        Set<InsurancePolicy> filteredPolicies = new HashSet<>();
-        for (InsurancePolicy policy : hashSetPolicies) {
+    public Set<InsurancePolicy2> getPoliciesByCoverageType(String type) {
+        Set<InsurancePolicy2> filteredPolicies = new HashSet<>();
+        for (InsurancePolicy2 policy : hashSetPolicies) {
             if (policy.getCoverageType().equalsIgnoreCase(type)) {
                 filteredPolicies.add(policy);
             }
@@ -51,15 +51,15 @@ public class InsurancePolicyManagement {
     }
 
     // Find duplicate policies based on policy number
-    public Set<InsurancePolicy> getDuplicatePolicies() {
+    public Set<InsurancePolicy2> getDuplicatePolicies() {
         Map<String, Integer> policyCount = new HashMap<>();
-        Set<InsurancePolicy> duplicates = new HashSet<>();
+        Set<InsurancePolicy2> duplicates = new HashSet<>();
 
-        for (InsurancePolicy policy : hashSetPolicies) {
+        for (InsurancePolicy2 policy : hashSetPolicies) {
             policyCount.put(policy.getPolicyNumber(), policyCount.getOrDefault(policy.getPolicyNumber(), 0) + 1);
         }
 
-        for (InsurancePolicy policy : hashSetPolicies) {
+        for (InsurancePolicy2 policy : hashSetPolicies) {
             if (policyCount.get(policy.getPolicyNumber()) > 1) {
                 duplicates.add(policy);
             }
@@ -71,10 +71,10 @@ public class InsurancePolicyManagement {
     // Performance comparison
     public void comparePerformance() {
         int numPolicies = 10000;
-        List<InsurancePolicy> policies = new ArrayList<>();
+        List<InsurancePolicy2> policies = new ArrayList<>();
 
         for (int i = 0; i < numPolicies; i++) {
-            policies.add(new InsurancePolicy("P" + i, "Holder" + i, new Date(), "Health", 500.0 + i));
+            policies.add(new InsurancePolicy2("P" + i, "Holder" + i, new Date(), "Health", 500.0 + i));
         }
 
         measurePerformance("HashSet", new HashSet<>(), policies);
@@ -82,7 +82,7 @@ public class InsurancePolicyManagement {
         measurePerformance("TreeSet", new TreeSet<>(), policies);
     }
 
-    private void measurePerformance(String setType, Set<InsurancePolicy> set, List<InsurancePolicy> policies) {
+    private void measurePerformance(String setType, Set<InsurancePolicy2> set, List<InsurancePolicy2> policies) {
         long startTime = System.nanoTime();
         set.addAll(policies);
         long addTime = System.nanoTime() - startTime;
@@ -99,18 +99,18 @@ public class InsurancePolicyManagement {
     }
 
     public static void main(String[] args) {
-        InsurancePolicyManagement system = new InsurancePolicyManagement();
+        InsurancePolicyManagement2 system = new InsurancePolicyManagement2();
 
         // Sample policies
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DAY_OF_YEAR, 10);
-        system.addPolicy(new InsurancePolicy("P123", "Alice", cal.getTime(), "Health", 500.0));
+        system.addPolicy(new InsurancePolicy2("P123", "Alice", cal.getTime(), "Health", 500.0));
 
         cal.add(Calendar.DAY_OF_YEAR, 25);
-        system.addPolicy(new InsurancePolicy("P124", "Bob", cal.getTime(), "Auto", 700.0));
+        system.addPolicy(new InsurancePolicy2("P124", "Bob", cal.getTime(), "Auto", 700.0));
 
         cal.add(Calendar.DAY_OF_YEAR, -20);
-        system.addPolicy(new InsurancePolicy("P125", "Carol", cal.getTime(), "Home", 900.0));
+        system.addPolicy(new InsurancePolicy2("P125", "Carol", cal.getTime(), "Home", 900.0));
 
         // Display all policies
         System.out.println("All Policies:");
