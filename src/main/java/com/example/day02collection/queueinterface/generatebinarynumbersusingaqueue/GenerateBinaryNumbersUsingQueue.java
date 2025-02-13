@@ -8,7 +8,7 @@ import java.util.Queue;
 public class GenerateBinaryNumbersUsingQueue {
     public static <T extends Queue<String>> List<String> generateBinaryNumbers(int N, T queue) {
         List<String> result = new ArrayList<>();
-        queue.offer("1"); // Start with "1"
+        queue.offer("1");
 
         for (int i = 0; i < N; i++) {
             String binary = queue.poll();
