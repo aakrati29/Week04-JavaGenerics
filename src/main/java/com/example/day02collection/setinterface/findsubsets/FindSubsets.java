@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class FindSubsets {
-    private static boolean findSubset(Set<Integer> set1, Set<Integer> set2) {
+    public static boolean findSubset(Set<Integer> set1, Set<Integer> set2) {
         if(set2.containsAll(set1)){
             return true;
         }

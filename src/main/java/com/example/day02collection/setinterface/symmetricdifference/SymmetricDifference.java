@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class SymmetricDifference {
 
-    private static <T> HashSet<T> symmetricDifference(Set<T> set1, Set<T> set2) {
+    public static <T> HashSet<T> symmetricDifference(Set<T> set1, Set<T> set2) {
         HashSet<T> result = new HashSet<>(set1);
         result.addAll(set2);
 

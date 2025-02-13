@@ -5,14 +5,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class UnionAndIntersection {
-    private static <T> HashSet<T> union(Set<T> set1, Set<T> set2){
+    public static <T> HashSet<T> union(Set<T> set1, Set<T> set2){
         HashSet<T> result = new HashSet<>(set1);
         result.addAll(set2);
 
         return result;
     }
 
-    private static <T> HashSet<T> intersection(Set<T> set1, Set<T> set2){
+    static <T> HashSet<T> intersection(Set<T> set1, Set<T> set2){
         HashSet<T> result = new HashSet<>(set1);
         result.retainAll(set2);
 
