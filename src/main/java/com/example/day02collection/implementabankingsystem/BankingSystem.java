@@ -3,9 +3,9 @@ package com.example.day02collection.implementabankingsystem;
 import java.util.*;
 
 public class BankingSystem {
-    private Map<Integer, Double> accounts = new HashMap<>(); // Stores account balances
-    private TreeMap<Double, List<Integer>> sortedAccounts = new TreeMap<>(); // Sorts by balance
-    private Queue<Integer> withdrawalQueue = new LinkedList<>(); // Processes withdrawal requests
+    public Map<Integer, Double> accounts = new HashMap<>(); // Stores account balances
+    public TreeMap<Double, List<Integer>> sortedAccounts = new TreeMap<>(); // Sorts by balance
+    public Queue<Integer> withdrawalQueue = new LinkedList<>(); // Processes withdrawal requests
 
     public void createAccount(int accountNumber, double initialBalance) {
         accounts.put(accountNumber, initialBalance);
