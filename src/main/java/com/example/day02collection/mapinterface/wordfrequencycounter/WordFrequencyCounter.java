@@ -3,7 +3,7 @@ package com.example.day02collection.mapinterface.wordfrequencycounter;
 import java.util.HashMap;
 
 public class WordFrequencyCounter {
-    private static HashMap<String, Integer> countFrequency(String input) {
+    static HashMap<String, Integer> countFrequency(String input) {
         HashMap<String, Integer> map = new HashMap<>();
 
         String[] words = input.toLowerCase().split("\\W+");

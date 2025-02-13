@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FindTheKeyOfHighestValue {
-    private static String findTheKeyOfHighestValue(Map<String, Integer> map) {
+    static String findTheKeyOfHighestValue(Map<String, Integer> map) {
         String maxKey = null;
         int maxValue = Integer.MIN_VALUE;
 
