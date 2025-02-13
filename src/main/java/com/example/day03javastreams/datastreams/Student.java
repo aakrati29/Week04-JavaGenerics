@@ -1,6 +1,6 @@
 package com.example.day03javastreams.datastreams;
 
-class Student {
+public class Student {
     int rollNumber;
     String name;
     double gpa;
