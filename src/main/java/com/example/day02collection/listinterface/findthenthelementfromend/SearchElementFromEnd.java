@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class SearchElementFromEnd {
-    private static <T> T searchElementFromEnd(LinkedList<T> ll, int n) {
+    public static <T> T searchElementFromEnd(LinkedList<T> ll, int n) {
 
         Iterator<T> fast = ll.iterator();
         Iterator<T> slow = ll.iterator();

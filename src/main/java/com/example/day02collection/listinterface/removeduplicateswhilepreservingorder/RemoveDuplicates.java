@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class RemoveDuplicates {
-    private static <T> List<T> removeDuplicate(List<T> list) {
+    public static <T> List<T> removeDuplicate(List<T> list) {
         List<T> result = new ArrayList<>();
         HashSet<T> set = new HashSet<>();
         for(T i : list){

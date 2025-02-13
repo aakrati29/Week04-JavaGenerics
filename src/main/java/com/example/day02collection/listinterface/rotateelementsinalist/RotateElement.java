@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RotateElement {
-    private static void rotateElement(List<Integer> input, int k) {
+    public static void rotateElement(List<Integer> input, int k) {
         int n = input.size();
         k= k % n;
 

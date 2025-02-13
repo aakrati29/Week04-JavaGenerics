@@ -3,7 +3,7 @@ package com.example.day02collection.listinterface.findfrequency;
 import java.util.HashMap;
 
 public class FindFrequency {
-    private static HashMap<String,Integer> countFrequency(String[] input) {
+    public static HashMap<String,Integer> countFrequency(String[] input) {
         HashMap<String,Integer> map = new HashMap<>();
 
         for(int i = 0; i < input.length; i++){
