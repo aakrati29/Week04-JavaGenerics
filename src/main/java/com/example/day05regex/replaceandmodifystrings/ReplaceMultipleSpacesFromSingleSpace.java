@@ -1,8 +1,5 @@
 package com.example.day05regex.replaceandmodifystrings;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class ReplaceMultipleSpacesFromSingleSpace {
 
     private static void replace(String input, String regex) {
