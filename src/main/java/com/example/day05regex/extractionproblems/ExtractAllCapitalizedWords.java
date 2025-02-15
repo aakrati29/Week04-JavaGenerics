@@ -16,7 +16,7 @@ public class ExtractAllCapitalizedWords {
     }
     public static void main(String[] args) {
         String input = "The Eiffel Tower is in Paris and the Statue of Liberty is in New York.";
-        String regex = "[A-Z][a-zA-Z]+";
+        String regex = "\\b[A-Z][a-zA-Z]+\\b";
 
         extractCapitalWords(input,regex);
     }
