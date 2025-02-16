@@ -1,4 +1,4 @@
-package com.example.day06annotations.Createannotationforloggingmethod;
+package com.example.day06annotations.createannotationforloggingmethod;
 
 import java.lang.reflect.Method;
 
